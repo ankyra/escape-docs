@@ -1,0 +1,6 @@
+<li class="blog-index-item"> 
+    <h3><a href="{{ .Permalink }}">{{ .Title}}</a></h3>
+    <small>posted on {{ .Date.Format "January 2, 2006" }} by {{ .Params.Author }}</small><br><br>
+    <p>{{ .Params.Summary }}</p>
+    <a href="{{ .Permalink }}">Read more &raquo;</a>
+</li>

@@ -1,0 +1,22 @@
+name: heist/escape-docs
+version: 0.2.@
+depends:
+- escape-client-latest as escape
+extends:
+- extension-docker-kubespec-latest
+inputs:
+- default: escape-docs
+  id: docker_image
+- default:
+  - deployment.yml
+  id: kube_spec_files
+  type: list[string]
+includes:
+- public/
+- Dockerfile
+templates:
+- file: deployment.yml.tpl
+  mapping:
+    docker_image: $this.inputs.docker_repository.concat($this.inputs.docker_image,
+      ":", $this.inputs.docker_image_version)
+pre_build: build.sh

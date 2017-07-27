@@ -1,0 +1,11 @@
+.DS_Store
+public/
+staging/
+static/
+node_modules/
+*.log
+*.swp
+.escape/
+deps/
+escape_state.json
+deployment.yml

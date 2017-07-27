@@ -1,0 +1,242 @@
+@import "_variables.less";
+
+body {
+    height: 100%;
+    background-color: #000;
+}
+
+a {
+    -o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.btn {
+    padding: 10px;
+}
+
+#icon-nav {
+    height: 18px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    -o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
+    padding: 0;
+    margin: 12px;
+    &:hover {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    @media only screen and (max-width : 768px) {
+        border-bottom: 0;
+        padding-left: 5px;
+    }
+   }
+}   
+
+.fa {
+    margin-right: 5px;
+}
+
+
+#hero {
+    background-color: #000;
+    height: 100%;
+}
+
+#hero-banner {
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    max-height: 900px;
+   @media only screen and (max-width : 992px) {
+        height: 650px;
+    }
+    padding-top: 100px;
+    h1 {
+        font-size: 28px;
+        margin-bottom: 40px;
+        text-shadow: 2px 1px #000;
+        color: #fff;
+        @media only screen and (max-width : 992px) {
+        font-size: 24px;
+    } 
+        @media only screen and (max-width : 620px) {
+            font-size: 24px;
+        } 
+    }
+    .btn {
+        background-color: transparent;
+        color: #fff;
+        &:hover {
+            background-color: @brand-primary;
+        }  
+    }
+    img {
+        width: 300px;
+        margin-bottom: 30px;
+        @media only screen and (max-width : 992px) {
+        width: 270px;
+        }
+    }
+    p {
+        color: #fff;
+    }
+}
+
+
+#main-content {
+    h1 {
+        color: #000;
+        text-shadow: #000 0px 0px 0px;
+    }
+    background: #eee;
+    color: #000;
+    opacity: 0.75;
+    padding: 50px;
+}
+ul.main-menu {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        display: block;
+        height: 40px;
+    }
+}
+
+
+.feature-box {
+    margin-bottom: 25px;
+    @media only screen and (max-width : 992px) {
+        margin-bottom: 70px;
+    } 
+}
+
+.feature-text {
+    min-height: 180px;
+    @media only screen and (max-width : 1200px) {
+        height: 210px;
+     }
+    @media only screen and (max-width : 992px) {
+        height: 100px;
+     }
+    margin-bottom: 5px;
+}
+
+.btn-custom {
+    padding: 6px;
+}
+
+.white-background {
+    background-color: #fff;
+    color: #444;
+}
+
+.page-wrapper {
+    padding-bottom: 150px;
+}
+
+.blog {
+    color: #777;
+    p {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    pre code {
+        overflow-x: scroll;
+        white-space: pre;
+    }
+    pre {
+        .hljs {
+            background: transparent;
+            }
+        }
+    a {
+        -o-transition: .2s;
+        -ms-transition: .2s;
+        -moz-transition: .2s;
+        -webkit-transition: .2s;
+        transition: .2s;
+      }
+    a:hover {
+        border-bottom: 1px dashed;
+    }
+    img {
+        border-radius: 4px;
+    }
+}
+
+
+#footer {
+    color: #ccc;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.header {
+    width: 100%;
+    padding: 5px;
+}
+
+.product {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+
+    div {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 50px;
+    }
+    .btn {
+        margin-top: 20px;
+    }
+
+    .left-container {
+        width: 50%;
+    }
+
+    .right-container {
+        width: 50%;
+    }
+    .background {
+        background: #eee;
+    }
+    .escape-logo {
+        background: #373;
+    }
+    .escape-logo img {
+        width: 100%;
+    }
+    .product-image {
+    }
+    .product-image img {
+        width: 100%;
+    }
+    .cta{
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.5em;
+    }
+}
+
+span.sub {
+    font-size: 0.8em;
+    font-style: italic;
+    display: inline-block;
+    line-height: 3.0em;
+}
+
+
+#mc_embed_signup{clear:left; font:14px Arkhip,Helvetica,Arial,sans-serif; width:100%;}

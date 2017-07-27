@@ -1,0 +1,31 @@
+{{ partial "head.html" . }}
+
+{{ partial "top-nav.html" . }}
+
+<div class="container-fluid white-background page-wrapper">
+
+<div class="container page-header">
+    <div class="col-md-8">
+      <h1>{{ .Title }}</h1>
+    </div>
+</div>
+
+
+<div class="container page-content blog">
+    <div class="col-md-8">
+    <br>
+    {{ .Content }}
+    <hr>
+    <div class="text-right">  
+        <a class ="tweet-link" href="https://twitter.com/share?text={{ .Title }} @AnkyraLtd&url={{ .Permalink }}">
+        <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>Tweet this
+    </a>
+    </div>
+    </div>
+</div>  
+</div>
+
+{{ partial "footer.html" . }}
+
+{{ partial "scripts.html" . }}
+
