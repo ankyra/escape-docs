@@ -3,13 +3,16 @@
 {{ partial "top-nav.html" . }}
 
 <div class="container-fluid white-background page-wrapper">
-
 <div class="container page-header">
-    <div class="col-md-8">
-        <h1>Docs</h1>
-        <h3><a href='escape-client/'>Command Line Reference for Escape Client</a></h3>
+    <div class="col-md-10">
+       <h1>{{ .Title }}</h1>
+   </div>
+</div>
+<div class="container page-content">
+    <div class="col-md-10">
+    {{ .Content }}
     </div>
-</div>    
+</div>
 </div>
 
 {{ partial "footer.html" . }}

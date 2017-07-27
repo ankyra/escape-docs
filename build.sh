@@ -21,3 +21,7 @@ EOF
 done
 
 hugulp build
+
+if [ -z $SKIP_BUILD ] ; then 
+    deps/_/extension-docker-kubespec/build_and_apply.sh $@
+fi

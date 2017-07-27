@@ -13,10 +13,15 @@ inputs:
   type: list[string]
 includes:
 - public/
+- config.toml
 - Dockerfile
 templates:
+- file: config.toml.tpl
+  mapping:
+    escape_client_version: $escape.version
 - file: deployment.yml.tpl
   mapping:
     docker_image: $this.inputs.docker_repository.concat($this.inputs.docker_image,
       ":", $this.inputs.docker_image_version)
-pre_build: build.sh
+build: build.sh
+

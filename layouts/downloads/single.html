@@ -1,0 +1,29 @@
+{{ partial "head.html" . }}
+
+{{ partial "top-nav.html" . }}
+
+<div class="container-fluid white-background page-wrapper">
+<div class="container page-header">
+    <div class="col-md-10">
+       <h1>{{ .Title }}</h1>
+   </div>
+</div>
+<div class="container page-content">
+<div class="col-md-10">
+<h2>Escape Version v{{ .Site.Params.EscapeClientVersion }}</h2>
+{{ range $key, $value := $.Site.Data.platforms.platforms }}
+    <div class='download'>
+        <a href='https://storage.googleapis.com/escape-releases-eu/escape-client/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
+            <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
+        </a>
+    </div>
+{{ end }}
+
+    {{ .Content }}
+</div>
+</div>
+</div>
+
+{{ partial "footer.html" . }}
+
+{{ partial "scripts.html" . }}
