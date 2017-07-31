@@ -11,6 +11,11 @@
 
 <div class='left-container background'>
 <h2>Escape v{{ .Site.Params.EscapeClientVersion }}</h2>
+    <span class='download'>
+        <a href='https://hub.docker.com/r/ankyra/escape/'>
+            <i class='fa fa-external-link'></i> Docker
+        </a>
+    </span>
 {{ range $key, $value := $.Site.Data.platforms.client }}
     <span class='download'>
         <a href='https://storage.googleapis.com/escape-releases-eu/escape-client/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
@@ -18,12 +23,15 @@
         </a>
     </span>
 {{ end }}
-
-    {{ .Content }}
 </div>
 
 <div class='right-container background'>
 <h2>Escape Registry v{{ .Site.Params.EscapeRegistryVersion }}</h2>
+    <span class='download'>
+        <a href='https://hub.docker.com/r/ankyra/escape-registry/'>
+            <i class='fa fa-external-link'></i> Docker
+        </a>
+    </span>
 {{ range $key, $value := $.Site.Data.platforms.registry }}
     <span class='download'>
         <a href='https://storage.googleapis.com/escape-releases-eu/escape-registry/{{ $.Site.Params.EscapeRegistryVersion}}/escape-registry-v{{$.Site.Params.EscapeRegistryVersion}}-{{ $key }}.tgz'>
@@ -31,8 +39,6 @@
         </a>
     </span>
 {{ end }}
-
-    {{ .Content }}
 </div>
 </div>
 
