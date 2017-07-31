@@ -2,41 +2,53 @@
 
 {{ partial "top-nav.html" . }}
 
-<div class="container-fluid white-background page-wrapper">
-<div class="container page-header">
-    <div class="col-md-10">
-       <h1>
-    <i class='fa fa-cloud-download' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
-   </div>
-</div>
-<div class="container page-content">
-<div class="col-md-6">
+<div id="hero">
+    <div id="hero-banner" class="container-fluid">
+        <div id="main-content" class="container text-center">
+       <h1><i class='fa fa-cloud-download' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
+
+<div class='product'>
+
+<div class='left-container background'>
 <h2>Escape v{{ .Site.Params.EscapeClientVersion }}</h2>
 {{ range $key, $value := $.Site.Data.platforms.client }}
-    <div class='download'>
+    <span class='download'>
         <a href='https://storage.googleapis.com/escape-releases-eu/escape-client/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
             <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
         </a>
-    </div>
+    </span>
 {{ end }}
 
     {{ .Content }}
 </div>
-<div class="col-md-6">
+
+<div class='right-container background'>
 <h2>Escape Registry v{{ .Site.Params.EscapeRegistryVersion }}</h2>
 {{ range $key, $value := $.Site.Data.platforms.registry }}
-    <div class='download'>
+    <span class='download'>
         <a href='https://storage.googleapis.com/escape-releases-eu/escape-registry/{{ $.Site.Params.EscapeRegistryVersion}}/escape-registry-v{{$.Site.Params.EscapeRegistryVersion}}-{{ $key }}.tgz'>
             <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
         </a>
-    </div>
+    </span>
 {{ end }}
 
     {{ .Content }}
 </div>
 </div>
+
+<div class='cta cta-small'>
+<a href="/docs/quickstart/">
+<i class='fa fa-book'></i>
+Get Started
+</a>
+</div>
+</div>
 </div>
 
-{{ partial "footer.html" . }}
+
+        <br>
+        <div id="footer" class="container text-center">
+            <small>Copyright &copy; <a href='https://www.ankyra.io/'>Ankyra Limited</a>, 2017 | 71-75 Shelton Street, London WC2H 9JQ, United Kingdom | Company No. 10536747</small>
+        </div>
 
 {{ partial "scripts.html" . }}

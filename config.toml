@@ -1,11 +1,11 @@
 languageCode = "en-us"
-title = "Ankyra"
+title = "Escape"
 baseURL = "https://www.ankyra.io"
 
 [params]
     gaTrackingId = ""
-    escapeClientVersion = "0.14.5"
-    escapeRegistryVersion = "0.7.0"
+    escapeClientVersion = "0.14.21"
+    escapeRegistryVersion = "0.7.9"
 
 
 [menu]

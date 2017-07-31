@@ -12,6 +12,9 @@
 </div>
 <div class="container page-content blog">
     <div class="col-md-8">
+    {{ if .Params.toc }}
+    {{ .TableOfContents }}
+    {{ end }}
     <br>
     {{ .Content }}
     <hr>

@@ -1,5 +1,5 @@
 ---
-date: 2017-07-31T00:12:06Z
+date: 2017-07-31T05:24:48Z
 title: "escape-client"
 slug: escape-client
 type: "docs"
@@ -11,7 +11,7 @@ Package and deployment manager
 ### Synopsis
 
 
-Escape v0.14.5 
+Escape v0.14.16 
 
 Escape is a tool that can be used to version, package, build, release, 
 deploy and operate software in the large and the small. Software of all sizes. 
