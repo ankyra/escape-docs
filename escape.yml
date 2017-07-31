@@ -2,6 +2,7 @@ name: heist/escape-docs
 version: 0.2.@
 depends:
 - escape-client-latest as escape
+- escape-registry-latest as registry
 extends:
 - extension-docker-kubespec-latest
 inputs:
@@ -19,6 +20,7 @@ templates:
 - file: config.toml.tpl
   mapping:
     escape_client_version: $escape.version
+    escape_registry_version: $registry.version
 - file: deployment.yml.tpl
   mapping:
     docker_image: $this.inputs.docker_repository.concat($this.inputs.docker_image,

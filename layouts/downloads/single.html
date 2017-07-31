@@ -5,15 +5,28 @@
 <div class="container-fluid white-background page-wrapper">
 <div class="container page-header">
     <div class="col-md-10">
-       <h1>{{ .Title }}</h1>
+       <h1>
+    <i class='fa fa-cloud-download' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
    </div>
 </div>
 <div class="container page-content">
-<div class="col-md-10">
-<h2>Escape Version v{{ .Site.Params.EscapeClientVersion }}</h2>
-{{ range $key, $value := $.Site.Data.platforms.platforms }}
+<div class="col-md-6">
+<h2>Escape v{{ .Site.Params.EscapeClientVersion }}</h2>
+{{ range $key, $value := $.Site.Data.platforms.client }}
     <div class='download'>
         <a href='https://storage.googleapis.com/escape-releases-eu/escape-client/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
+            <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
+        </a>
+    </div>
+{{ end }}
+
+    {{ .Content }}
+</div>
+<div class="col-md-6">
+<h2>Escape Registry v{{ .Site.Params.EscapeRegistryVersion }}</h2>
+{{ range $key, $value := $.Site.Data.platforms.registry }}
+    <div class='download'>
+        <a href='https://storage.googleapis.com/escape-releases-eu/escape-registry/{{ $.Site.Params.EscapeRegistryVersion}}/escape-registry-v{{$.Site.Params.EscapeRegistryVersion}}-{{ $key }}.tgz'>
             <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
         </a>
     </div>

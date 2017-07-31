@@ -203,6 +203,10 @@ ul.main-menu {
 }
 
 .product {
+    border-top: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px #444;
+    margin-bottom: 25px;
     display: flex;
     width: 100%;
     flex-flow: row nowrap;
@@ -218,10 +222,12 @@ ul.main-menu {
 
     .left-container {
         width: 50%;
+        border-radius: 10px 0px 0px 10px;
     }
 
     .right-container {
         width: 50%;
+        border-radius: 0px 10px 10px 0px;
     }
     .background {
         background: #eee;
@@ -231,18 +237,36 @@ ul.main-menu {
     }
     .escape-logo img {
         width: 100%;
+        margin: 0 auto;
     }
     .product-image {
+        display: flex;
+        justify-content: center;
     }
     .product-image img {
         width: 100%;
+        margin: 0 auto;
     }
-    .cta{
-        text-align: center;
-        justify-content: center;
-        width: 100%;
-        font-size: 1.5em;
-    }
+}
+.cta{
+    border-top: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px #444;
+    margin-bottom: 25px;
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5em;
+    background: blue;
+}
+.cta a {
+    color: white;
+    display: block;
+    height: 100%;
+    padding: 40px;
+    width: 100%;
 }
 
 span.sub {

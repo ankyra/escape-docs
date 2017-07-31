@@ -4,7 +4,8 @@ baseURL = "https://www.ankyra.io"
 
 [params]
     gaTrackingId = ""
-    escapeClientVersion = "0.14.0"
+    escapeClientVersion = "0.14.5"
+    escapeRegistryVersion = "0.7.0"
 
 
 [menu]
@@ -17,12 +18,14 @@ baseURL = "https://www.ankyra.io"
     [[menu.main]]
     identifier = "downloads"
     name       = "Downloads"
+    pre        = "<i class='fa fa-cloud-download' aria-hidden='true'></i>&nbsp;"  
     url        = "/downloads/"
     weight     = 2
 
     [[menu.main]]
     identifier = "docs"
     name       = "Docs"
+    pre        = "<i class='fa fa-book' aria-hidden='true'></i>&nbsp;"  
     url        = "/docs/"
     weight     = 3
 
