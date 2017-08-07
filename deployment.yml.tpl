@@ -29,3 +29,7 @@ spec:
           image: {{{docker_image}}}
           ports:
             - containerPort: 80
+          resources:
+            requests:
+              memory: "10Mi"
+              cpu: "50m"
