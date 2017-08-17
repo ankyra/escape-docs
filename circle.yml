@@ -10,7 +10,7 @@ dependencies:
   - sudo dpkg -i hugo*.deb
   - npm install -g hugulp@1.3.0
 
-  - curl https://storage.googleapis.com/escape-releases-eu/escape-v0.14.5.tgz > /home/ubuntu/bin/escape.tgz
+  - curl https://storage.googleapis.com/escape-releases-eu/escape-v0.15.2.tgz > /home/ubuntu/bin/escape.tgz
   - tar -C /home/ubuntu/bin -xvzf /home/ubuntu/bin/escape.tgz
 
   - echo $GCLOUD_SERVICE_KEY | base64 --decode -i > key.json
