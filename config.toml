@@ -43,7 +43,7 @@ baseURL = "https://www.ankyra.io"
     identifier = "escape"
     name       = "Escape"
     pre        = ""  
-    url        = "https://github.com/products/"
+    url        = "https://www.ankyra.io/products/"
     weight     = 1
 
     [[menu.main]]
