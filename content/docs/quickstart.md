@@ -14,6 +14,7 @@ but you can find 32 bit builds on the [Downloads](/downloads/) page.
 
 ```
 curl https://
+tar -xvzf 
 sudo mv escape /usr/bin/escape
 ```
 
@@ -21,6 +22,7 @@ sudo mv escape /usr/bin/escape
 
 ```
 curl https://
+tar -xvzf 
 sudo mv escape /usr/bin/escape
 ```
 
@@ -213,12 +215,14 @@ build: build_my_thing.sh
 ```
 
 And then the next version will be `1.1.0`, `1.1.1`, ... Following such a scheme
-strikes a reasonable balance between having meaningful versions vs. an annoying
-release process.
+strikes a reasonable balance between having meaningful versions vs. manual
+intervention.
 
-# Inputs and outputs
+# State
 
-It's easy to take a string input
+## Inputs and outputs
+
+A string input
 
 ```
 name: my-project/my-deployment-unit
@@ -266,11 +270,13 @@ inputs:
 And calculate a default value:
 
 
-# State management
+## State management
 
 # Errands
 
-# Dependencies
+# Composing Units
+
+## Dependencies
 
 ```
 name: my-project/my-deployment-unit
@@ -283,7 +289,7 @@ A unit can use its dependencies' outputs as its own inputs.
 
 For more information on the scripting language see https://github.com/ankyra/escape-core/
 
-# Providers and Consumers
+## Providers and Consumers
 
 
 ```
@@ -308,8 +314,7 @@ inputs:
   default: $a-provider.outputs.test_output
 ```
 
-
-# Extensions
+## Extensions
 
 ```
 name: my-project/my-deployment-unit
@@ -318,7 +323,7 @@ extends:
 - extension-docker-latest
 ```
 
-### Templates
+# Templates
 
 ```
 name: my-project/my-deployment-unit
