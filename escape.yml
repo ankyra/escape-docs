@@ -16,7 +16,7 @@ includes:
 - public/
 - config.toml
 - Dockerfile
-templates:
+deploy_templates:
 - file: config.toml.tpl
   mapping:
     escape_client_version: $escape.version
