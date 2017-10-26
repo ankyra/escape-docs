@@ -1,0 +1,29 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+    - image: ankyra/escape:latest
+
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Install Docker client
+        command: |
+          set -x
+          VER="17.03.0-ce"
+          curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz
+          tar -xz -C /tmp -f /tmp/docker-$VER.tgz
+          mv /tmp/docker/* /usr/bin
+    - run: 
+        name: Deploy providers
+        command: |
+          echo $GCLOUD_SERVICE_KEY | base64 --decode -i > key.json
+          escape deploy gcp-provider-latest -d 'gcp' -v credentials=@key.json
+          escape deploy ankyra/kubernetes-gce-latest -d 'gke' -v cluster_name=ci-cluster -v zone=europe-west1-d 
+
+    - run: 
+        name: Build Escape releases
+        command: |
+          escape release -d "website" --skip-destroy -v docker_repository="eu.gcr.io/ankyra-ci/" -v 'docker_cmd=["gcloud", "docker", "--"]'
