@@ -10,5 +10,5 @@ cp deps/_/escape-inventory/docs/*.md content/docs/
 hugulp build
 
 if [ -z $SKIP_BUILD ] ; then 
-    deps/_/extension-docker-kubespec/build_and_apply.sh $@
+    deps/_/extension-docker-kubespec/build.sh $@
 fi
