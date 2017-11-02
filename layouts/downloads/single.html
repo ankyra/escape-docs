@@ -18,7 +18,7 @@
     </span>
 {{ range $key, $value := $.Site.Data.platforms.client }}
     <span class='download'>
-        <a href='https://storage.googleapis.com/escape-releases-eu/escape-client/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
+        <a href='https://storage.googleapis.com/escape-releases-eu/escape/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
             <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
         </a>
     </span>
@@ -26,15 +26,15 @@
 </div>
 
 <div class='right-container background'>
-<h2>Escape Registry v{{ .Site.Params.EscapeRegistryVersion }}</h2>
+<h2>Escape Inventory v{{ .Site.Params.EscapeInventoryVersion }}</h2>
     <span class='download'>
-        <a href='https://hub.docker.com/r/ankyra/escape-registry/'>
+        <a href='https://hub.docker.com/r/ankyra/escape-inventory/'>
             <i class='fa fa-external-link'></i> Docker
         </a>
     </span>
-{{ range $key, $value := $.Site.Data.platforms.registry }}
+{{ range $key, $value := $.Site.Data.platforms.inventory }}
     <span class='download'>
-        <a href='https://storage.googleapis.com/escape-releases-eu/escape-registry/{{ $.Site.Params.EscapeRegistryVersion}}/escape-registry-v{{$.Site.Params.EscapeRegistryVersion}}-{{ $key }}.tgz'>
+        <a href='https://storage.googleapis.com/escape-releases-eu/escape-inventory/{{ $.Site.Params.EscapeInventoryVersion}}/escape-inventory-v{{$.Site.Params.EscapeInventoryVersion}}-{{ $key }}.tgz'>
             <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
         </a>
     </span>

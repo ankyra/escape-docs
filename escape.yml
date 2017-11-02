@@ -20,12 +20,13 @@ includes:
 - config.toml
 - Dockerfile
 
-deploy_templates:
+templates:
 - file: config.toml.tpl
   mapping:
     escape_client_version: $escape.version
     escape_inventory_version: $inventory.version
 
+deploy_templates:
 - file: deployment.yml.tpl
   mapping:
     docker_image: $this.inputs.docker_repository.concat($this.inputs.docker_image,
