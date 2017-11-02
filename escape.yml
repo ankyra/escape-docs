@@ -20,7 +20,7 @@ includes:
 - config.toml
 - Dockerfile
 
-templates:
+build_templates:
 - file: config.toml.tpl
   mapping:
     escape_client_version: $escape.version
