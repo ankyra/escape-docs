@@ -5,7 +5,7 @@ baseURL = "https://www.ankyra.io"
 [params]
     gaTrackingId = ""
     escapeClientVersion = "{{{escape_client_version}}}"
-    escapeRegistryVersion = "{{{escape_registry_version}}}"
+    escapeRegistryVersion = "{{{escape_inventory_version}}}"
 
 
 [menu]
