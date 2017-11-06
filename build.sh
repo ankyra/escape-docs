@@ -1,11 +1,13 @@
 #!/bin/bash -e
 
+DEPS="deps/heist/escape-integration-tests/deps"
+
 rm -rf content/docs
 mkdir -p content/
-cp -r deps/_/escape/docs/cmd content/docs
-cp deps/_/escape/docs/*.md content/docs/
-cp deps/_/escape/vendor/github.com/ankyra/escape-core/docs/*.md content/docs/
-cp deps/_/escape-inventory/docs/*.md content/docs/
+cp -r ${DEPS}/_/escape/docs/cmd content/docs
+cp ${DEPS}/_/escape/docs/*.md content/docs/
+cp ${DEPS}/_/escape/vendor/github.com/ankyra/escape-core/docs/*.md content/docs/
+cp ${DEPS}/_/escape-inventory/docs/*.md content/docs/
 
 hugulp build
 

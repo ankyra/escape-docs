@@ -1,8 +1,7 @@
 name: heist/escape-docs
 version: 0.2.@
 depends:
-- escape-latest as escape
-- escape-inventory-latest as inventory
+- heist/escape-integration-tests-latest as escape
 
 extends:
 - extension-docker-kubespec-latest
@@ -23,8 +22,8 @@ includes:
 build_templates:
 - file: config.toml.tpl
   mapping:
-    escape_client_version: $escape.version
-    escape_inventory_version: $inventory.version
+    escape_client_version: $escape.metadata.escape_version
+    escape_inventory_version: $escape.metadata.inventory_version
 
 deploy_templates:
 - file: deployment.yml.tpl

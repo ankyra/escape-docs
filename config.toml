@@ -4,7 +4,7 @@ baseURL = "https://www.ankyra.io"
 
 [params]
     gaTrackingId = ""
-    escapeClientVersion = "0.19.0"
+    escapeClientVersion = "0.19.1"
     escapeInventoryVersion = "0.12.0"
 
 
