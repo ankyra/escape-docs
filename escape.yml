@@ -1,5 +1,5 @@
 name: heist/escape-docs
-version: $escape.version
+version: 0.3.@
 depends:
 - heist/escape-integration-tests-latest as escape
 
