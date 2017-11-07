@@ -1,5 +1,5 @@
 name: heist/escape-docs
-version: 0.2.@
+version: $escape.version
 depends:
 - heist/escape-integration-tests-latest as escape
 
@@ -18,6 +18,12 @@ includes:
 - public/
 - config.toml
 - Dockerfile
+
+metadata:
+  core_version: $escape.metadata.core_version
+  escape_version: $escape.metadata.escape_version
+  inventory_version: $escape.metadata.inventory_version
+  release_metadata_api_version: $escape.metadata.release_metadata_api_version
 
 build_templates:
 - file: config.toml.tpl
