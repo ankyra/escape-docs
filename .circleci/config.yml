@@ -19,7 +19,7 @@ jobs:
     - run:
         name: Install hugo
         command: |
-          curl -L -o hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.22/hugo_0.22_Linux-64bit.deb
+          curl -L -o hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.30/hugo_0.30_Linux-64bit.deb
           dpkg -i hugo.deb
           npm -g config set user root
           npm install -g hugulp@1.3.0

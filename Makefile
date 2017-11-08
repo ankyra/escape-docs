@@ -6,3 +6,6 @@ serve: clean
 
 build: clean
 	hugulp build
+
+dev: clean
+	escape run build && hugulp watch

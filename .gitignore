@@ -9,3 +9,4 @@ node_modules/
 deps/
 escape_state.json
 deployment.yml
+content/docs
