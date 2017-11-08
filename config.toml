@@ -6,7 +6,7 @@ pygmentsOptions = "linenos=true"
 
 [params]
     gaTrackingId = ""
-    escapeClientVersion = "0.19.19"
+    escapeClientVersion = "0.19.20"
     escapeInventoryVersion = "0.12.1"
 
 

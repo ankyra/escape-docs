@@ -2,20 +2,20 @@
 
 {{ partial "top-nav.html" . }}
 
-<div class="container-fluid white-background page-wrapper">
+<div class="white-background docs-container">
 
 {{ partial "docs_toc.html" . }}
 
 
-<div class="container page-header">
-    <div class="col-md-8">
-        <h1> <i class='fa fa-book' aria-hidden='true'></i>&nbsp;Docs</h1>
-        <hr/>
-        <h3><a href='quickstart/'>Escape Quickstart</a></h3>
-        <h4><a href='escape/'>Escape Command Line Reference</a></h4>
-        <h4><a href='scripting-language/'>Scripting Language Reference</a></h4>
-        <h4><a href='scripting-language-stdlib/'>Scripting Language Standard Library Reference</a></h4>
-        <h3><a href='escape-inventory/'>Escape Inventory</a></h3>
+<div class='docs-content'>
+    <div class="container">
+        <h1> <i class='fa fa-book' aria-hidden='true'></i>&nbsp;Documentation</h1>
+    </div>
+        
+    <div class="container page-content">
+        This is the documentation for Escape v{{.Site.Params.EscapeClientVersion }} and Escape Inventory v{{.Site.Params.EscapeInventoryVersion }}.
+
+        <h3><a href='what-is-escape/'>What is Escape?</a></h3>
     </div>
 </div>    
 </div>
