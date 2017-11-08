@@ -1,11 +1,13 @@
 languageCode = "en-us"
 title = "Escape"
 baseURL = "https://www.ankyra.io"
+pygmentsCodeFences = true
+pygmentsOptions = "linenos=true"
 
 [params]
     gaTrackingId = ""
-    escapeClientVersion = "0.19.1"
-    escapeInventoryVersion = "0.12.0"
+    escapeClientVersion = "0.19.19"
+    escapeInventoryVersion = "0.12.1"
 
 
 [menu]

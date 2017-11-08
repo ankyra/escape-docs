@@ -1,6 +1,8 @@
 languageCode = "en-us"
 title = "Escape"
 baseURL = "https://www.ankyra.io"
+pygmentsCodeFences = true
+pygmentsOptions = "linenos=true"
 
 [params]
     gaTrackingId = ""
