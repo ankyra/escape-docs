@@ -2,25 +2,22 @@
 
 {{ partial "top-nav.html" . }}
 
-<div class="container-fluid white-background page-wrapper">
+<div class="container-fluid white-background page-wrapper docs-container">
 
 {{ if .Params.toc }}
     {{ partial "docs_toc.html" . }}
 {{ end }}
 
-<div class="container page-header">
-    <div class="col-md-8">
-      <h1>
+<div class='docs-content'>
+    <div class="container">
+        <h1>
         <i class='fa fa-book' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
     </div>
+    <div class="container page-content blog">
+        {{ .Content }}
+        <hr>
+    </div>  
 </div>
-<div class="container page-content blog">
-    <div class="col-md-8">
-    <br>
-    {{ .Content }}
-    <hr>
-    </div>
-</div>  
 </div>
 
 {{ partial "footer.html" . }}

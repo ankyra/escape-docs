@@ -284,5 +284,27 @@ span.sub {
     line-height: 3.0em;
 }
 
+.docs-container {
+    display: flex;
+    flex-flow: row no-wrap;
+}
+.docs-toc {
+    flex-grow: 0;
+    width: 250px;
+    height: 100%;
+    background: #eee;
+    padding: 10px;
+}
+.docs-content {
+    flex-grow: 1;
+}
+.docs-toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+.docs-toc li {
+    padding-left: 20px;
+}
+
 
 #mc_embed_signup{clear:left; font:14px Arkhip,Helvetica,Arial,sans-serif; width:100%;}
