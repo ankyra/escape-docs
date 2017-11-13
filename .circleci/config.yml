@@ -28,10 +28,10 @@ jobs:
         name: Deploy providers
         command: |
           echo $GCLOUD_SERVICE_KEY | base64 --decode -i > key.json
-          escape deploy gcp-provider-latest -d 'gcp' -v credentials=@key.json
-          escape deploy ankyra/kubernetes-gce-latest -d 'gke' -v cluster_name=ci-cluster -v zone=europe-west1-d 
+          escape run deploy gcp-provider-latest -d 'gcp' -v credentials=@key.json
+          escape run deploy ankyra/kubernetes-gce-latest -d 'gke' -v cluster_name=ci-cluster -v zone=europe-west1-d 
 
     - run: 
         name: Build Escape releases
         command: |
-          escape release -d "website" --skip-destroy -v docker_repository="eu.gcr.io/ankyra-ci/" -v 'docker_cmd=["gcloud", "docker", "--"]'
+          escape run release -d "website" --skip-destroy -v docker_repository="eu.gcr.io/ankyra-ci/" -v 'docker_cmd=["gcloud", "docker", "--"]'
