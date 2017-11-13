@@ -18,7 +18,7 @@
     </span>
 {{ range $key, $value := $.Site.Data.platforms.client }}
     <span class='download'>
-        <a href='https://storage.googleapis.com/escape-releases-eu/escape-client/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
+        <a href='https://storage.googleapis.com/escape-releases-eu/escape/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
             <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
         </a>
     </span>
