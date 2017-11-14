@@ -2,59 +2,52 @@
 
 {{ partial "top-nav.html" . }}
 
-<div id="hero">
-    <div id="hero-banner" class="container-fluid">
-        <div id="main-content" class="container text-center">
+<div class="white-background docs-container">
+
+{{ partial "docs_toc.html" . }}
+
+<div class='docs-content'>
+    <div class="container">
        <h1><i class='fa fa-cloud-download' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
 
-<div class='product'>
-
-<div class='left-container background'>
+<div class='downloads'>
+<div>
 <h2>Escape v{{ .Site.Params.EscapeClientVersion }}</h2>
-    <span class='download'>
+    <div class='download'>
         <a href='https://hub.docker.com/r/ankyra/escape/'>
             <i class='fa fa-external-link'></i> Docker
         </a>
-    </span>
+    </div>
 {{ range $key, $value := $.Site.Data.platforms.client }}
-    <span class='download'>
+    <div class='download'>
         <a href='https://storage.googleapis.com/escape-releases-eu/escape/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
             <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
         </a>
-    </span>
+    </div>
 {{ end }}
 </div>
 
-<div class='right-container background'>
+<div>
 <h2>Escape Inventory v{{ .Site.Params.EscapeInventoryVersion }}</h2>
-    <span class='download'>
+    <div class='download'>
         <a href='https://hub.docker.com/r/ankyra/escape-inventory/'>
             <i class='fa fa-external-link'></i> Docker
         </a>
-    </span>
+    </div>
 {{ range $key, $value := $.Site.Data.platforms.inventory }}
-    <span class='download'>
+    <div class='download'>
         <a href='https://storage.googleapis.com/escape-releases-eu/escape-inventory/{{ $.Site.Params.EscapeInventoryVersion}}/escape-inventory-v{{$.Site.Params.EscapeInventoryVersion}}-{{ $key }}.tgz'>
             <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
         </a>
-    </span>
+    </div>
 {{ end }}
 </div>
-</div>
 
-<div class='cta cta-small'>
-<a href="/docs/quickstart/">
-<i class='fa fa-book'></i>
-Get Started
-</a>
 </div>
 </div>
 </div>
 
 
-        <br>
-        <div id="footer" class="container text-center">
-            <small>Copyright &copy; <a href='https://www.ankyra.io/'>Ankyra Limited</a>, 2017 | 71-75 Shelton Street, London WC2H 9JQ, United Kingdom | Company No. 10536747</small>
-        </div>
+{{ partial "footer.html" . }}
 
 {{ partial "scripts.html" . }}

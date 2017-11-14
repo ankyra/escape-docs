@@ -64,26 +64,6 @@ pygmentsOptions = ""
     identifier = "escape"
     name       = "Escape"
     pre        = ""  
-    url        = "https://www.ankyra.io/products/"
+    url        = "/docs/"
     weight     = 1
 
-    [[menu.main]]
-    identifier = "downloads"
-    name       = "Downloads"
-    pre        = ""  
-    url        = "/downloads/"
-    weight     = 2
-
-    [[menu.main]]
-    identifier = "docs"
-    name       = "Docs"
-    pre        = ""  
-    url        = "/docs/"
-    weight     = 3
-
-    [[menu.main]]
-    identifier = "app"
-    name       = "Go to app"
-    pre        = ""  
-    url        = "/app/"
-    weight     = 4
