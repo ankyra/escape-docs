@@ -54,6 +54,9 @@
 @import "../less/bootstrap/utilities.less";
 @import "../less/bootstrap/responsive-utilities.less";
 
+// Escape them
+@import "ankyra_theme.less";
+
 
 //
 // Variables
@@ -460,21 +463,21 @@
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color:                      @body-bg;
-@navbar-inverse-bg:                         @gray-base;
+@navbar-inverse-color:                      @top-navbar-color;
+@navbar-inverse-bg:                         @top-navbar-background;
 @navbar-inverse-border:                     none;
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 #fff;
-@navbar-inverse-link-hover-color:           @brand-primary;
+@navbar-inverse-link-color:                 @top-navbar-color;
+@navbar-inverse-link-hover-color:           @top-navbar-color;
 @navbar-inverse-link-hover-bg:              transparent;
-@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-color:          @top-navbar-color;
 @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
 @navbar-inverse-link-disabled-color:        #444;
 @navbar-inverse-link-disabled-bg:           transparent;
 
 // Inverted navbar brand label
-@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-color:                @top-navbar-color;
 @navbar-inverse-brand-hover-color:          #fff;
 @navbar-inverse-brand-hover-bg:             transparent;
 
@@ -937,6 +940,5 @@
 @dl-horizontal-breakpoint:    @grid-float-breakpoint;
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
-
 
 

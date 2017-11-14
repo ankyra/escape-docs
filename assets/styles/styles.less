@@ -1,5 +1,11 @@
 @import "_variables.less";
 
+.navbar-docs {
+    background: @docs-navbar-background;
+    color: @docs-navbar-color;
+}
+
+
 body {
     height: 100%;
     background-color: #000;
@@ -29,9 +35,9 @@ a {
     transition: .2s;
     padding: 0;
     margin: 12px;
+    color: @docs-navbar-color;
     &:hover {
-    border-bottom: 1px solid #fff;
-    color: #fff;
+    border-bottom: 1px solid @docs-navbar-color;
     @media only screen and (max-width : 768px) {
         border-bottom: 0;
         padding-left: 5px;
@@ -207,75 +213,6 @@ ul.main-menu {
     padding: 5px;
 }
 
-.product {
-    border-top: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 6px 6px 5px #444;
-    margin-bottom: 25px;
-    display: flex;
-    width: 100%;
-    flex-flow: row nowrap;
-
-    div {
-        display: flex;
-        flex-flow: column wrap;
-        padding: 50px;
-    }
-    .btn {
-        margin-top: 20px;
-    }
-
-    .left-container {
-        width: 50%;
-        border-radius: 10px 0px 0px 10px;
-    }
-
-    .right-container {
-        width: 50%;
-        border-radius: 0px 10px 10px 0px;
-    }
-    .background {
-        background: #eee;
-    }
-    .escape-logo {
-        background: #373;
-    }
-    .escape-logo img {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .product-image {
-        display: flex;
-        justify-content: center;
-    }
-    .product-image img {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-.cta{
-    border-top: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 6px 6px 5px #444;
-    margin-bottom: 25px;
-    display: flex;
-    width: 100%;
-    flex-flow: row nowrap;
-    text-align: center;
-    justify-content: center;
-    font-size: 1.5em;
-    background: #44f;
-}
-.cta a {
-    color: white;
-    display: block;
-    height: 100%;
-    padding: 40px;
-    width: 100%;
-}
-.cta-small a {
-    padding: 20px;
-}
 
 span.sub {
     font-size: 0.8em;
@@ -286,15 +223,30 @@ span.sub {
 
 .docs-container {
     display: grid;
-    grid-template-columns: 200px auto 1fr;
+    grid-template-columns: 240px auto 1fr;
 }
+
 .docs-toc {
-    background: #eee;
-    width: 200px;
+    background: @toc-background;
+    width: 240px;
     padding: 20px;
     padding-top: 30px;
+    color: @toc-color;
+}
+.docs-toc a {
+    color: @toc-link-color;
+}
+.docs-toc a:hover {
+    color: @toc-link-hover-color;
+}
+.toc-header {
+    letter-spacing: 3px;
+    background: @toc-header-background;
+    color: @toc-header-color;
 }
 .docs-content {
+    color: @content-color;
+    background: @content-background;
     padding: 10px;
 }
 .docs-toc ul {
@@ -303,7 +255,10 @@ span.sub {
     padding-bottom: 10px;
 }
 .docs-toc li {
-    padding-left: 20px;
+    padding-left: 15px;
+    background-image: url("/img/bullet.png");
+    background-position: 0 5px;
+    background-repeat: no-repeat;
 }
 .readable { 
     max-width: 750px;
@@ -321,16 +276,19 @@ span.sub {
 }
 .readable th {
     padding: 5px;
-    background: #666;
-    color: #eee;
+    background: @th-background;
+    color: @th-color;
     text-align: left;
     padding-right: 20px;
 }
 .readable td {
     padding: 5px;
     padding-right: 20px;
-    background: #eee;
+    background: @td-background;
     vertical-align: top;
+}
+.spacer {
+    background: @toc-background;
 }
 
 
