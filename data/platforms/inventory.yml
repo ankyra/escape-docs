@@ -1,3 +1,12 @@
 linux-amd64: 
   icon: "fa-linux"
   name: "Linux (64 bit)"
+linux-386: 
+  icon: "fa-linux"
+  name: "Linux (32 bit)"
+darwin-amd64: 
+  icon: "fa-apple"
+  name: "MacOS (64 bit)"
+darwin-386: 
+  icon: "fa-apple"
+  name: "MacOS (32 bit)"
