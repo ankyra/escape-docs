@@ -27,11 +27,15 @@
             {{ .Content }}
         </div>
         <div class='docs-back-next'>
-        {{ if .Params.back }}
-            <a href={{ .Params.back }}>&lt; Back: {{ .Params.backLabel }}</a>
-        {{ end }}
         {{ if .Params.next }}
+          <div class=''>
             <a href={{ .Params.next }}>&gt; Next: {{ .Params.nextLabel }}</a>
+          </div>
+        {{ end }}
+        {{ if .Params.back }}
+          <div class='docs-back'>
+            <a href={{ .Params.back }}>&lt; Back: {{ .Params.backLabel }}</a>
+          </div>
         {{ end }}
         </div>
     </div>  

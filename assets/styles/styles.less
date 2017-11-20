@@ -1,6 +1,7 @@
 @import "_variables.less";
 @import "downloads.less";
 @import "docling.less";
+@import "docs.less";
 
 .navbar-docs {
     background: @docs-navbar-background;
@@ -208,76 +209,6 @@ span.sub {
     font-style: italic;
     display: inline-block;
     line-height: 3.0em;
-}
-
-.docs-container {
-    display: grid;
-    grid-template-columns: 240px auto 1fr;
-}
-
-.docs-toc {
-    background: @toc-background;
-    width: 240px;
-    padding: 20px;
-    padding-top: 30px;
-    color: @toc-color;
-}
-.docs-toc a {
-    color: @toc-link-color;
-}
-.docs-toc a:hover {
-    color: @toc-link-hover-color;
-}
-.toc-header {
-    letter-spacing: 3px;
-    background: @toc-header-background;
-    color: @toc-header-color;
-}
-.docs-content {
-    color: @content-color;
-    background: @content-background;
-    padding: 10px;
-}
-.docs-toc ul {
-    list-style-type: none;
-    padding: 0;
-    padding-bottom: 10px;
-}
-.docs-toc li {
-    padding-left: 15px;
-    background-image: url("/img/bullet.png");
-    background-position: 0 5px;
-    background-repeat: no-repeat;
-}
-.readable { 
-    max-width: 750px;
-    line-height: 25px;
-}
-.readable h1 {
-    font-size: 1.5em;
-}
-.readable h2 {
-    font-size: 1.2em;
-}
-
-.readable table {
-
-}
-.readable th {
-    padding: 5px;
-    background: @th-background;
-    color: @th-color;
-    text-align: left;
-    padding-right: 20px;
-}
-.readable td {
-    padding: 5px;
-    padding-right: 20px;
-    background: @td-background;
-    vertical-align: top;
-}
-.spacer {
-    background: @toc-background;
 }
 
 
