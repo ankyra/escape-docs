@@ -14,8 +14,25 @@
         <i class='fa fa-book' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
     </div>
     <div class="container page-content blog">
+        {{ if .Params.wip }}
+        <div class='docs-wip'>
+            This page is a <i>work in progress</i>. 
+            
+            {{ if .Params.contributeLink }} 
+            You can help by contributing. 
+            {{ end }}
+        </div>
+        {{ end }}
         <div class='readable'>
             {{ .Content }}
+        </div>
+        <div class='docs-back-next'>
+        {{ if .Params.back }}
+            <a href={{ .Params.back }}>&lt; Back: {{ .Params.backLabel }}</a>
+        {{ end }}
+        {{ if .Params.next }}
+            <a href={{ .Params.next }}>&gt; Next: {{ .Params.nextLabel }}</a>
+        {{ end }}
         </div>
     </div>  
 </div>
