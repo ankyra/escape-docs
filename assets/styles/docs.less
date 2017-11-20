@@ -1,13 +1,21 @@
 @import "_variables.less";
 
-.docs-container {
-    display: grid;
-    grid-template-columns: 240px auto 1fr;
+@media (min-width: 800px) {
+    .docs-container {
+        display: grid;
+        grid-template-columns: 240px auto;
+    }
+}
+@media (max-width: 800px) {
+    .docs-container {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
 }
 
 .docs-toc {
+    width: 100%;
     background: @toc-background;
-    width: 240px;
     padding: 20px;
     padding-top: 30px;
     color: @toc-color;
@@ -27,6 +35,7 @@
     color: @content-color;
     background: @content-background;
     padding: 10px;
+    padding-left: 30px;
 }
 .docs-toc ul {
     list-style-type: none;
