@@ -1,12 +1,12 @@
 languageCode = "en-us"
 title = "Escape"
-baseURL = "https://www.ankyra.io"
+baseURL = "https://escape.ankyra.io/"
 pygmentsCodeFences = true
 pygmentsStyle = "friendly"
 pygmentsOptions = ""
 
 [params]
-    gaTrackingId = ""
+    gaTrackingId = "UA-110134649-2"
     escapeClientVersion = "{{{escape_client_version}}}"
     escapeInventoryVersion = "{{{escape_inventory_version}}}"
 
