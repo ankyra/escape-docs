@@ -26,7 +26,6 @@ jobs:
     - restore_cache:
         keys:
         - npm-deps
-        - escape-release-deps
 
     - run:
         name: Install hugulp
@@ -51,8 +50,4 @@ jobs:
         command: |
           escape run release -d "website" --skip-destroy -v docker_repository="eu.gcr.io/ankyra-ci/" -v 'docker_cmd=["gcloud", "docker", "--"]'
 
-    - save_cache:
-        key: escape-release-deps
-        paths:
-        - /root/.config/escape/
 
