@@ -44,7 +44,6 @@ pygmentsOptions = ""
 
     [[menu.ankyra]]
     name       = "Contact"
-    pre        = "<i class='fa fa-envelope' aria-hidden='true'></i>&nbsp;"  
     url        = "https://www.ankyra.io/contact/"
     weight     = 5
 
@@ -64,6 +63,19 @@ pygmentsOptions = ""
     identifier = "escape"
     name       = "Escape"
     pre        = ""  
-    url        = "/docs/"
+    url        = "https://www.ankyra.io/products/"
     weight     = 1
 
+    [[menu.main]]
+    identifier = "docs"
+    name       = "Documentation"
+    pre        = ""  
+    url        = "/docs/"
+    weight     = 2
+
+    [[menu.main]]
+    identifier = "downloads"
+    name       = "Downloads"
+    pre        = ""  
+    url        = "/downloads/"
+    weight     = 3
