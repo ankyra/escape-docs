@@ -7,44 +7,45 @@
 {{ partial "docs_toc.html" . }}
 
 <div class='docs-content'>
-    <div class="container">
-       <h1><i class='fa fa-cloud-download' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
+   <h1><i class='fa fa-cloud-download' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
 
-<div class='downloads'>
-<div>
-<h2>Escape v{{ .Site.Params.EscapeClientVersion }}</h2>
-    <div class='download'>
-        <a href='https://hub.docker.com/r/ankyra/escape/'>
-            <i class='fa fa-external-link'></i> Docker
-        </a>
-    </div>
+    <div class='downloads'>
+        <div>
+            <h2>Escape v{{ .Site.Params.EscapeClientVersion }}</h2>
+            <div class='download'>
+                <a href='https://hub.docker.com/r/ankyra/escape/'>
+                    <i class='fa fa-external-link'></i> Docker
+                </a>
+            </div>
+
 {{ range $key, $value := $.Site.Data.platforms.client }}
-    <div class='download'>
-        <a href='https://storage.googleapis.com/escape-releases-eu/escape/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
-            <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
-        </a>
-    </div>
+<div class='download'>
+    <a href='https://storage.googleapis.com/escape-releases-eu/escape/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
+        <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
+    </a>
+</div>
 {{ end }}
+
+        </div>
+
+        <div>
+            <h2>Escape Inventory v{{ .Site.Params.EscapeInventoryVersion }}</h2>
+                <div class='download'>
+                    <a href='https://hub.docker.com/r/ankyra/escape-inventory/'>
+                        <i class='fa fa-external-link'></i> Docker
+                    </a>
+                </div>
+            {{ range $key, $value := $.Site.Data.platforms.inventory }}
+                <div class='download'>
+                    <a href='https://storage.googleapis.com/escape-releases-eu/escape-inventory/{{ $.Site.Params.EscapeInventoryVersion}}/escape-inventory-v{{$.Site.Params.EscapeInventoryVersion}}-{{ $key }}.tgz'>
+                        <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </div>
 </div>
 
-<div>
-<h2>Escape Inventory v{{ .Site.Params.EscapeInventoryVersion }}</h2>
-    <div class='download'>
-        <a href='https://hub.docker.com/r/ankyra/escape-inventory/'>
-            <i class='fa fa-external-link'></i> Docker
-        </a>
-    </div>
-{{ range $key, $value := $.Site.Data.platforms.inventory }}
-    <div class='download'>
-        <a href='https://storage.googleapis.com/escape-releases-eu/escape-inventory/{{ $.Site.Params.EscapeInventoryVersion}}/escape-inventory-v{{$.Site.Params.EscapeInventoryVersion}}-{{ $key }}.tgz'>
-            <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
-        </a>
-    </div>
-{{ end }}
-</div>
-
-</div>
-</div>
 </div>
 
 
