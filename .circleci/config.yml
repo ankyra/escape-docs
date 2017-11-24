@@ -26,6 +26,7 @@ jobs:
     - restore_cache:
         keys:
         - npm-deps
+        - escape-release-deps
 
     - run:
         name: Install hugulp
@@ -37,6 +38,11 @@ jobs:
         key: npm-deps
         paths:
         - /usr/local/lib/node_modules/
+
+    - save_cache:
+        key: escape-release-deps
+        paths:
+        - /root/.config/escape/
 
     - run: 
         name: Deploy providers
