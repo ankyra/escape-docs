@@ -39,11 +39,6 @@ jobs:
         paths:
         - /usr/local/lib/node_modules/
 
-    - save_cache:
-        key: escape-release-deps
-        paths:
-        - /root/.config/escape/
-
     - run: 
         name: Deploy providers
         command: |
@@ -55,3 +50,9 @@ jobs:
         name: Build Escape releases
         command: |
           escape run release -d "website" --skip-destroy -v docker_repository="eu.gcr.io/ankyra-ci/" -v 'docker_cmd=["gcloud", "docker", "--"]'
+
+    - save_cache:
+        key: escape-release-deps
+        paths:
+        - /root/.config/escape/
+
