@@ -9,4 +9,6 @@ node_modules/
 deps/
 escape_state.json
 deployment.yml
-content/docs
+content/docs/reference/
+content/docs/escape_installation.md
+content/docs/inventory_installation.md
