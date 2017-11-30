@@ -21,13 +21,13 @@ pygmentsOptions = ""
     [[menu.ankyra]]
     identifier = "products"
     name       = "Products"
-    url        = "/products/"
+    url        = "https://www.ankyra.io/products/"
     weight     = 1
 
     [[menu.ankyra]]
     identifier = "team"
     name       = "Team"
-    url        = "/team/"
+    url        = "https://www.ankyra.io/team/"
     weight     = 2
 
     #[[menu.ankyra]]
@@ -39,7 +39,7 @@ pygmentsOptions = ""
     [[menu.ankyra]]
     identifier = "blog"
     name       = "Blog"
-    url        = "/blog/"
+    url        = "https://www.ankyra.io/blog/"
     weight     = 4
 
     [[menu.ankyra]]
