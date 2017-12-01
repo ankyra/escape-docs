@@ -18,6 +18,7 @@ includes:
 - public/
 - config.toml
 - Dockerfile
+- nginx.conf
 
 metadata:
   core_version: $escape.metadata.core_version
