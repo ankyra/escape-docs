@@ -6,7 +6,7 @@ pygmentsStyle = "friendly"
 pygmentsOptions = ""
 
 [params]
-    gaTrackingId = "UA-110134649-1"
+    gaTrackingId = "UA-110134649-2"
     escapeClientVersion = "{{{escape_client_version}}}"
     escapeInventoryVersion = "{{{escape_inventory_version}}}"
 
