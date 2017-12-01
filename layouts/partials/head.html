@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ if .Params.Title }} 
   <title>Escape | {{ .Params.Title }}</title>
+  <meta property="og:title" content="Escape | {{ .Params.Title }}">
+  <meta property="twitter:title" content="Escape | {{ .Params.Title }}">
   {{ else }}
   <title>Escape - The Release Engineering and Continuous Delivery tool by Ankyra</title>
+  <meta property="og:title" content="Escape - The Release Engineering and Continuous Delivery tool by Ankyra">
+  <meta property="twitter:title" content="Escape - The Release Engineering and Continuous Delivery tool by Ankyra">
   {{ end }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Ankyra is a London based company focused on products and services around Continuous Delivery on modern infrastructure.">
   <meta name="robots" content="all">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ankyra">
   <meta property="og:description" content="Experts in Continuous Delivery on Modern Infrastructure">
-  <meta property="og:url" content="https://ankyra.io/">
+  <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="Ankyra">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:description" content="Experts in Continuous Delivery on Modern Infrastructure">
-  <meta name="twitter:title" content="Ankyra">
   <meta name="twitter:domain" content="Ankyra">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
