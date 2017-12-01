@@ -1,7 +1,9 @@
 .DS_Store
 public/
 staging/
-static/
+static/css/
+static/img/
+static/rev-manifest.json
 node_modules/
 *.log
 *.swp

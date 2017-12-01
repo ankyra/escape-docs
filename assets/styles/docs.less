@@ -28,6 +28,7 @@
 }
 .toc-header {
     letter-spacing: 3px;
+    font-family: 'Roboto';
     background: @toc-header-background;
     color: @toc-header-color;
 }
@@ -36,6 +37,9 @@
     background: @content-background;
     padding: 10px;
     padding-left: 30px;
+    h1 {
+      font-family: @font-family-header;
+    }
 }
 .docs-toc ul {
     list-style-type: none;
@@ -47,10 +51,13 @@
     background-image: url("/img/bullet.png");
     background-position: 0 5px;
     background-repeat: no-repeat;
+    font-family: @font-family-content;
+    font-size: 0.9em;
 }
 .readable { 
     max-width: 750px;
     line-height: 25px;
+    font-family: @font-family-content;
 }
 .readable h1 {
     font-size: 1.5em;

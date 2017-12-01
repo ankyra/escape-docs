@@ -1,5 +1,5 @@
 clean:
-	rm -rf public staging static
+	rm -rf public staging 
 
 serve: clean
 	hugulp watch
