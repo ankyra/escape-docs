@@ -3,6 +3,8 @@ title: "What is Escape?"
 slug: what-is-escape 
 type: "docs"
 toc: true
+next: /docs/how-does-it-work/
+nextLabel: How Does It Work?
 ---
 
 Escape is a cross-cloud release engineering kit that aims to reach a few goals:
@@ -52,4 +54,3 @@ Escape should enable you to make everything:
 * Reproducible
 * Consistent
 
-[&gt; Next: Get Started](/docs/escape-installation/)
