@@ -57,10 +57,10 @@ There are a few ways we can control these deployments.
 ## Deploying by version
 
 Suppose our Test environment is looking good and we've received word that
-`quickstart/hello-world-v0.0.1` is good to go to Stage.
+`quickstart/hello-world-v0.0.1` is ready to go to Stage.
 
 If we know exactly what version we want to deploy into our environment we can
-ask Escape to deploy it using the [escape run deploy](/docs/reference/escape_run_deploy)
+ask Escape to deploy it using the [escape run deploy](/docs/reference/escape_run_deploy/)
 command:
 
 ```

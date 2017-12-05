@@ -45,7 +45,7 @@ deploy:
 <div class='docling'>
 The `.@` at the end of our version signals to Escape that it should
 auto-version from there. Versioning is covered in depth
-[here](/docs/reference/versioning/), 
+<a href='/docs/guides/versioning/'>here</a>.
 </div>
 
 We can use the [plan preview](/docs/reference/escape_plan_preview/) command to make sure 
@@ -60,7 +60,7 @@ That's looking tidy. We don't have to run the `escape plan preview` command
 explicitly for any of our build steps as Escape will do it automatically, but
 it can be a handy validation step). NB. If you're getting an "Unauthorized"
 error here, you need to configure your
-[Inventory](/docs/quickstart/configure-inventory/).
+[Inventory](/docs/quickstart/configure-escape/).
 
 We now have enough to create an empty package, but usually we do want to put
 something inside it. Our Escape plan includes a reference to `README.md`, but
