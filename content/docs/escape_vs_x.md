@@ -10,9 +10,15 @@ next: /docs/escape-installation/
 nextLabel: Installation
 ---
 
+Escape provides abstractions over releases, deployments and environments,
+making it easier to manage the life-cycle and delivery of software components
+and their artefacts.  We primarly use Escape to manage cloud environments, and
+as there are many tools in this space, this page will try and show where Escape 
+fits in, how it's different or where the overlap is.
+
 Any statements perceived as negative are hopefully fair critiques of the tools
 in question. We've probably taken inspiration from all these tools so please
-don't take this the wrong way, dear vendors. 
+don't take this the wrong way, dear vendors <i class='fa fa-heart'></i>
 
 ## Escape vs. BOSH
 
@@ -30,12 +36,17 @@ Escape is heavily inspired by BOSH, but aims to be less opinionated about how
 things should be done and what underlying tools are being used. BOSH is mainly
 used to work with Virtual Machines, but its release engineering capabitilies
 can't be used to do Containers, Serverless, etc.  Escape takes a more generic
-approach, and doesn't provide healthchecking and self-healing out of the box
-for that reason.
+approach, which makes it more flexible. It means that healthchecking and
+self-healing is not provided out of the box, but pushed into the releases
+themselves (if they need it). Escape _extensions_ make it possible to turn this
+into a pattern though, which can then be reused across packages.
 
-Escape has no built-in concept of stemcells, but a similar cross-cloud base
-image can be built using regular Escape releases (that use `packer` for
-example, see more below).
+For that same reason Escape has no built-in concept of stemcells, but once
+again we can achieve a similar result by building a cross-cloud base image
+using regular Escape releases (that use `packer` and `ansible` for example, see
+more below). For the moment these base images would have to be developed
+in-house, but at some point we may have something like this up on the global
+Inventory.
 
 *Advantages of BOSH*
 
@@ -53,11 +64,12 @@ example, see more below).
 
 ## Escape vs. Chef, Ansible, Puppet, Salt
 
-Chef, Ansible, Puppet and Salt are configuration management tools. Generally
-they bring existing machines into some desired state by e.g. installing
-packages, starting services and writing files. Some of these tools also support
-creating the machines and other bits of cloud infrastructure, but generally
-they're best use on existing machines.
+[Chef](https://www.chef.io/chef/), [Ansible](https://www.ansible.com/),
+[Puppet](https://puppet.com/) and [Salt](https://saltstack.com/) (CAPS) are
+configuration management tools. Generally they bring existing machines into
+some desired state by e.g. installing packages, starting services and writing
+files. Some of these tools also support creating the machines and other bits of
+cloud infrastructure, but generally they're best used on existing machines.
 
 Escape is not meant to replace these tools, but can wrap around them to add
 packaging, versioning, dependency management, environment promotions, etc.  For
@@ -99,13 +111,13 @@ stemcell, as mentioned in the BOSH section).
 
 ## Escape vs. Helm
 
-Helm is a package manager for Kubernetes specifications providing popular 
-software packaged for Kubernetes. 
+[Helm](https://github.com/kubernetes/helm) is a package manager for Kubernetes
+specifications providing popular software packaged for Kubernetes. 
 
 Escape can also work as a package manager for Kubernetes specifications, and in
 fact there's an extension for that. When Escape is used like that, and just for
 that, there aren't many differences between Helm and Escape, except that Escape 
-doesn't use a server process (ie. tiller) on each cluster. 
+doesn't use a server process (ie. `tiller`) on each cluster. 
 
 Escape can also wrap around Helm and provide lifecycle management for its _charts_; in
 fact there's an extension for that as well. This allows you to promote Helm charts 
