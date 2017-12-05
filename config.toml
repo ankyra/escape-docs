@@ -1,14 +1,14 @@
 languageCode = "en-us"
 title = "Escape"
-baseURL = "https://www.ankyra.io"
+baseURL = "https://escape.ankyra.io/"
 pygmentsCodeFences = true
 pygmentsStyle = "friendly"
 pygmentsOptions = ""
 
 [params]
     gaTrackingId = ""
-    escapeClientVersion = "0.19.26"
-    escapeInventoryVersion = "0.12.1"
+    escapeClientVersion = "0.21.10"
+    escapeInventoryVersion = "0.12.14"
 
 
 [menu]
@@ -25,8 +25,25 @@ pygmentsOptions = ""
     weight     = 1
 
     [[menu.ankyra]]
+    identifier = "team"
+    name       = "Team"
+    url        = "https://www.ankyra.io/team/"
+    weight     = 2
+
+    #[[menu.ankyra]]
+    #identifier = "services"
+    #name       = "Services"
+    #url        = "#"
+    #weight     = 3
+
+    [[menu.ankyra]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "https://www.ankyra.io/blog/"
+    weight     = 4
+
+    [[menu.ankyra]]
     name       = "Contact"
-    pre        = "<i class='fa fa-envelope' aria-hidden='true'></i>&nbsp;"  
     url        = "https://www.ankyra.io/contact/"
     weight     = 5
 
@@ -50,22 +67,15 @@ pygmentsOptions = ""
     weight     = 1
 
     [[menu.main]]
+    identifier = "docs"
+    name       = "Documentation"
+    pre        = ""  
+    url        = "/docs/"
+    weight     = 2
+
+    [[menu.main]]
     identifier = "downloads"
     name       = "Downloads"
     pre        = ""  
     url        = "/downloads/"
-    weight     = 2
-
-    [[menu.main]]
-    identifier = "docs"
-    name       = "Docs"
-    pre        = ""  
-    url        = "/docs/"
     weight     = 3
-
-    [[menu.main]]
-    identifier = "app"
-    name       = "Go to app"
-    pre        = ""  
-    url        = "/app/"
-    weight     = 4

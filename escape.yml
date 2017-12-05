@@ -1,18 +1,9 @@
 name: heist/escape-docs
 version: 0.3.@
-depends:
-- heist/escape-integration-tests-latest as escape
-
-extends:
-- extension-docker-kubespec-latest
-
-inputs:
-- default: escape-docs
-  id: docker_image
-- default:
-  - deployment.yml
-  id: kube_spec_files
-  type: list[string]
+description: |
+  Documentation for Escape and the Escape Inventory hosted at
+  https://escape.ankyra.io/docs/. Contains the introduction, quickstart,
+  reference and downloads pages.
 
 includes:
 - public/
@@ -20,17 +11,39 @@ includes:
 - Dockerfile
 - nginx.conf
 
+depends:
+- heist/escape-integration-tests-latest as escape
+
+extends:
+- extension-docker-kubespec-latest
+
+
+inputs:
+- id: docker_image
+  visible: false
+  default: escape-docs
+- id: kube_spec_files
+  visible: false
+  type: list[string]
+  default:
+  - deployment.yml
+- id: google_analytics_id
+  default: UA-110134649-2
+
 metadata:
   core_version: $escape.metadata.core_version
   escape_version: $escape.metadata.escape_version
   inventory_version: $escape.metadata.inventory_version
   release_metadata_api_version: $escape.metadata.release_metadata_api_version
 
+
+
 build_templates:
 - file: config.toml.tpl
   mapping:
     escape_client_version: $escape.metadata.escape_version
     escape_inventory_version: $escape.metadata.inventory_version
+    google_analytics_id: $this.inputs.google_analytics_id
 - file: content/docs/escape_installation.md.tpl
   mapping:
     version: $this.metadata.escape_version
@@ -38,11 +51,12 @@ build_templates:
   mapping:
     version: $this.metadata.inventory_version
 
+
 deploy_templates:
 - file: deployment.yml.tpl
   mapping:
     docker_image: $this.inputs.docker_repository.concat($this.inputs.docker_image,
       ":", $this.inputs.docker_image_version)
 
-build: build.sh
 
+build: build.sh
