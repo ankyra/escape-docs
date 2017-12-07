@@ -3,8 +3,8 @@ title: "What is Escape?"
 slug: what-is-escape 
 type: "docs"
 toc: true
-next: /docs/how-does-it-work/
-nextLabel: How Does It Work?
+next: /docs/how-does-escape-work/
+nextLabel: How Does Escape Work?
 ---
 
 Escape is a cross-cloud release engineering kit that aims to reach a few goals:

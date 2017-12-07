@@ -4,8 +4,8 @@ slug: escape-vs-x
 type: "docs"
 toc: true
 
-back: /docs/how-does-it-work/
-backLabel: How Does It Work?
+back: /docs/how-does-escape-work/
+backLabel: How Does Escape Work?
 next: /docs/escape-installation/
 nextLabel: Installation
 ---
@@ -18,7 +18,10 @@ fits in, how it's different or where the overlap is.
 
 Any statements perceived as negative are hopefully fair critiques of the tools
 in question. We've probably taken inspiration from all these tools so please
-don't take this the wrong way, dear vendors <i class='fa fa-heart'></i>
+don't take any of this the wrong way <i class='fa fa-heart'></i> 
+
+Do let us know of any inaccuracies on the [issue
+tracker](https://github.com/Ankyra/escape-docs/issues).
 
 ## Escape vs. BOSH
 
@@ -26,32 +29,32 @@ don't take this the wrong way, dear vendors <i class='fa fa-heart'></i>
 deployment, lifecycle management, and monitoring of distributed systems.
 As such it's very similar in scope to Escape, but takes a different approach. 
 
-In BOSH releases are built on top of stemcells which provide a cross-cloud
-baseline to build on. A BOSH Director is used to track versions, deploy
-releases and monitor and heal deployed virtual machines. To make this
-all work the ecosystem prescribes various components and ways of working; it is
-opinionated about how things should be done. 
+In BOSH releases are built on top of
+[stemcells](http://bosh.cloudfoundry.org/stemcells/) which provide a
+cross-cloud baseline to build on.  A BOSH
+[Director](https://bosh.io/docs/bosh-components.html#director) is used to track
+versions, deploy releases and monitor and heal deployed virtual machines. To
+make this all work the ecosystem prescribes various components and ways of
+working; it is opinionated about how things should be done. 
 
-Escape is heavily inspired by BOSH, but aims to be less opinionated about how
-things should be done and what underlying tools are being used. BOSH is mainly
-used to work with Virtual Machines, but its release engineering capabitilies
-can't be used to do Containers, Serverless, etc.  Escape takes a more generic
-approach, which makes it more flexible. It means that healthchecking and
-self-healing is not provided out of the box, but pushed into the releases
-themselves (if they need it). Escape _extensions_ make it possible to turn this
-into a pattern though, which can then be reused across packages.
+BOSH is mainly used to work with Virtual Machines, but its release engineering
+capabitilies can't be used to do Containers, Serverless, etc.  Escape takes a
+more generic approach, which does make working on those layers possible. It
+does mean Escape has to forgo on some of the healthchecking and self-healing
+capabitilies, as they can't be tackled in a generic way that work across all
+layers, but if releases do need these capabilities they can be develop as
+normal packages and imported (or [extended](/docs/reference/extensions/)) where needed. 
 
 For that same reason Escape has no built-in concept of stemcells, but once
 again we can achieve a similar result by building a cross-cloud base image
 using regular Escape releases (that use `packer` and `ansible` for example, see
-more below). For the moment these base images would have to be developed
-in-house, but at some point we may have something like this up on the global
-Inventory.
+more below).
 
 *Advantages of BOSH*
 
 * Solid release engineering
 * Cross-cloud virtual machines out of the box
+* Stemcells and community releases
 * Self-healing deployments
 
 *Disadvantages of BOSH*
@@ -143,4 +146,4 @@ territory so you might as well Escape.
 
 There's a lot of stuff out there, but hopefully this has given you an idea of
 how Escape compares to the rest of the world. We're always keen to hear from
-people though so if you're wondering how Escape relates to X, let us know!
+people though so if you're wondering how Escape relates to X, [let us know](https://github.com/Ankyra/escape-docs/issues)!

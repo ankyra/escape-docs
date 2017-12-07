@@ -1,6 +1,6 @@
 ---
-title: "How Does It Work?"
-slug: how-does-it-work
+title: "How Does Escape Work?"
+slug: how-does-escape-work
 type: "docs"
 toc: true
 next: /docs/escape-vs-x/
