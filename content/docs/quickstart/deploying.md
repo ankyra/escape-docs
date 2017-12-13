@@ -3,7 +3,6 @@ title: "Deploying Environments"
 slug: deploying
 type: "docs"
 toc: true
-wip: true
 
 back: /docs/quickstart/input-variables/
 backLabel: Input Variables
@@ -135,9 +134,15 @@ escape run deploy quickstart/hello-world-v0.0.@ -v who=World -e stage
 
 ## Converge
 
-TODO, sorry
+So far all of our commands have been running deployments, which create state as
+a side effect, but we can also define the state first and then use [escape run
+converge](/docs/reference/escape_run_converge/) to bring the environment into
+its desired state. 
 
 ```bash
-escape state create
 escape run converge
 ```
+
+To find out more about manipulating state see the [reference documentation on state](/docs/guides/state/).
+
+
