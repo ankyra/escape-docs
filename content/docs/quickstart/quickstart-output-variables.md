@@ -3,7 +3,6 @@ title: "Output Variables"
 slug: output-variables
 type: "docs"
 toc: true
-wip: true
 
 back: /docs/quickstart/dependencies/
 backLabel: Dependencies
@@ -106,6 +105,73 @@ it to our Inventory so that it can be picked up by our parent package:
 escape run release
 ```
 
-TODO
-there are a few things you can do but I'll have to tell you about them later. TODO
-TODO
+The "parent" package we've built in the [previous
+section](/docs/quickstart/dependencies/) was using the following Escape plan
+(saved in `escape-dep.yml`): 
+
+
+```yaml
+name: quickstart/introduction
+version: 0.0.@
+description: 
+logo: 
+
+depends:
+- release_id: quickstart/hello-world-latest
+  mapping:
+    who: $this.inputs.who
+
+inputs:
+- id: who
+  default: Everyone
+```
+
+Since this is a contrived example we'll just show a few patterns:
+
+### Outputting Dependency Outputs
+
+Sometimes we'd like to make our dependency outputs available to our upstream
+dependencies.  This can be useful for writing wrappers or exposing certain 
+configuration outputs that may be useful down the line (e.g. URLs, ...).
+We can once again use the [scripting language](/docs/references/scripting-language/) 
+to wire things up without having to fall-back to BASH scripts:
+
+```yaml
+name: quickstart/introduction
+version: 0.0.@
+description: 
+logo: 
+
+depends:
+- quickstart/hello-world-latest as hello
+
+outputs:
+- id: who
+  default: $hello.outputs.who
+```
+
+### Using Dependency Outputs as Inputs
+
+In our previous example we have used the parent input to configure a
+dependency, but we can also use a dependency output to configure a parent:
+
+```yaml
+name: quickstart/introduction
+version: 0.0.@
+description: 
+logo: 
+
+depends:
+- quickstart/hello-world-latest as who
+
+inputs:
+- id: literal
+  default: $hello.outputs.literal
+  eval_before_dependencies: false
+```
+
+Note the use of `eval_before_dependencies`. Normally inputs are evaluated
+before dependencies, but using this option we can defer it to after.  Using
+this technique we can for instance depend on a database package and use its
+outputs to configure our application. However, there might be a slightly more
+appropriate way to model this, which we'll explore in the next section:
