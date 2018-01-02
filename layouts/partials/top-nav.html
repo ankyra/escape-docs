@@ -22,26 +22,3 @@
       </div>
     </div>
   </nav>
-  <nav class="navbar navbar-inverse navbar-docs">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"
-          aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="https://www.ankyra.io/products/">
-          <img id="icon-nav" src="/img/escape.png">
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-        <ul class="nav navbar-nav navbar-left">
-          {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}"> {{ .Pre }}{{ .Name }} </a></li>
-          {{ end }}
-        </ul>
-      </div>
-    </div>
-  </nav>
