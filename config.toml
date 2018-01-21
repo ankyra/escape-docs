@@ -7,8 +7,8 @@ pygmentsOptions = ""
 
 [params]
     gaTrackingId = ""
-    escapeClientVersion = "0.21.10"
-    escapeInventoryVersion = "0.12.14"
+    escapeClientVersion = "0.21.12"
+    escapeInventoryVersion = "0.12.19"
 
 
 [menu]
@@ -22,13 +22,19 @@ pygmentsOptions = ""
     identifier = "products"
     name       = "Products"
     url        = "https://www.ankyra.io/products/"
-    weight     = 1
+    weight     = 2
+
+    [[menu.ankyra]]
+    identifier = "docs"
+    name       = "Docs"
+    url        = "/docs/"
+    weight     = 3
 
     [[menu.ankyra]]
     identifier = "team"
     name       = "Team"
     url        = "https://www.ankyra.io/team/"
-    weight     = 2
+    weight     = 4
 
     #[[menu.ankyra]]
     #identifier = "services"
@@ -40,24 +46,24 @@ pygmentsOptions = ""
     identifier = "blog"
     name       = "Blog"
     url        = "https://www.ankyra.io/blog/"
-    weight     = 4
+    weight     = 5
 
     [[menu.ankyra]]
     name       = "Contact"
     url        = "https://www.ankyra.io/contact/"
-    weight     = 5
+    weight     = 6
 
     [[menu.ankyra]]
     name       = "Twitter"
     pre        = "<i class='fa fa-twitter' aria-hidden='true'></i>&nbsp;"  
     url        = "https://twitter.com/AnkyraLtd"
-    weight     = 6
+    weight     = 7
 
     [[menu.ankyra]]
     name       = "Github"
     pre        = "<i class='fa fa-github' aria-hidden='true'></i>&nbsp;"  
     url        = "https://github.com/Ankyra"
-    weight     = 7
+    weight     = 8
 
     [[menu.main]]
     identifier = "escape"
