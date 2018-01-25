@@ -1,48 +1,47 @@
 {{ partial "head.html" . }} {{ partial "top-nav.html" . }}
 
-<div class="white-background docs-container">
-
-    {{ partial "docs_toc.html" . }}
-
-    <div class='docs-content'>
-        <h1>
-            <i class='fa fa-cloud-download' aria-hidden='true'></i>&nbsp;{{ .Title }}</h1>
-
-        <div class='downloads'>
-            <div class="download-section">
-                <h2>Escape v{{ .Site.Params.EscapeClientVersion }}</h2>
-                <a class="download" href='https://hub.docker.com/r/ankyra/escape/'>
-                    <i class='fa fa-external-link'></i> Docker
-                </a>
-
-                {{ range $key, $value := $.Site.Data.platforms.client }}
-                <a class="download" href='https://storage.googleapis.com/escape-releases-eu/escape/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
-                    <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
-                </a>
-                {{ end }}
-                <div class="installation-instructions">
-                    <a href="/docs/escape-installation/">Escape installation instructions</a>
-                </div>
+<div id="product-page" class="container-fluid white-background">
+    <div class="container">
+        <div class="container page-header">
+            <div class="col-md-12 ankyra-page-header">
+                <h1>Downloads</h1>
             </div>
+        </div>
+        <div class="row product-section ">
+            <div class='downloads'>
+                <div class="download-section">
+                    <h2>Escape v{{ .Site.Params.EscapeClientVersion }}</h2>
+                    <a class="download" href='https://hub.docker.com/r/ankyra/escape/'>
+                        <i class='fa fa-external-link'></i> Docker
+                    </a>
 
-            <div class="download-section">
-                <h2>Escape Inventory v{{ .Site.Params.EscapeInventoryVersion }}</h2>
-                <a class="download" href='https://hub.docker.com/r/ankyra/escape-inventory/'>
-                    <i class='fa fa-external-link'></i> Docker
-                </a>
-                {{ range $key, $value := $.Site.Data.platforms.inventory }}
-                <a class="download" href='https://storage.googleapis.com/escape-releases-eu/escape-inventory/{{ $.Site.Params.EscapeInventoryVersion}}/escape-inventory-v{{$.Site.Params.EscapeInventoryVersion}}-{{ $key }}.tgz'>
-                    <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
-                </a>
-                {{ end }}
-                <div class="installation-instructions">
-                    <a href="/docs/inventory-installation/">Escape Inventory installation instructions</a>
+                    {{ range $key, $value := $.Site.Data.platforms.client }}
+                    <a class="download" href='https://storage.googleapis.com/escape-releases-eu/escape/{{ $.Site.Params.EscapeClientVersion}}/escape-v{{$.Site.Params.EscapeClientVersion}}-{{ $key }}.tgz'>
+                        <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
+                    </a>
+                    {{ end }}
+                    <div class="installation-instructions">
+                        <a href="/docs/escape-installation/">Escape installation instructions</a>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <h2>Escape Inventory v{{ .Site.Params.EscapeInventoryVersion }}</h2>
+                    <a class="download" href='https://hub.docker.com/r/ankyra/escape-inventory/'>
+                        <i class='fa fa-external-link'></i> Docker
+                    </a>
+                    {{ range $key, $value := $.Site.Data.platforms.inventory }}
+                    <a class="download" href='https://storage.googleapis.com/escape-releases-eu/escape-inventory/{{ $.Site.Params.EscapeInventoryVersion}}/escape-inventory-v{{$.Site.Params.EscapeInventoryVersion}}-{{ $key }}.tgz'>
+                        <i class='fa {{ $value.icon }}'></i> {{ $value.name }}
+                    </a>
+                    {{ end }}
+                    <div class="installation-instructions">
+                        <a href="/docs/inventory-installation/">Escape Inventory installation instructions</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-
 
 {{ partial "footer.html" . }} {{ partial "scripts.html" . }}
