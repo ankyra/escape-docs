@@ -1,21 +1,29 @@
 div.downloads {
-    display: flex;
-    flex-flow: column wrap;
-    div {
-        width: 100%;
+}
+
+.download-section {
+    text-align: center;
+    margin-bottom: 50px;
+    h2 {
+        text-align: left;
+        margin-bottom: 20px;
     }
 }
 
-.download {
-    line-height: 3.0em;
-    font-size: 1.3em;
-    a {
-        padding-bottom: 5px;
-        border-bottom: 1px dashed rgba(192, 192, 192, 0);
-        transition: border 0.5s ease;
-      }
-    a:hover {
-        border-bottom: 1px dashed;
-    }
+.download, .download:visited, .download:active, .download:hover {
+    display: inline-block;
+    font-size: 1.1em;
+    background-color: #ddd;
+    color: #000;
+    padding: 20px;
+    border-bottom: 1px dashed rgba(192, 192, 192, 0);
+    transition: border 0.5s ease;
+    margin: 10px;
+    border-bottom: 6px solid #ddd;
+
 }
 
+.download:hover {
+    box-sizing:border-box;
+    border-bottom: 6px solid #00528d;
+}
