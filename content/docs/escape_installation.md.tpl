@@ -62,7 +62,7 @@ go get -u github.com/ankyra/escape
 ## From Source Using Escape
 
 If you already have an Escape binary (and you love recursion) then you can also
-use Escape to build Escape.
+use Escape to build Escape (the built binary will always be built for Linux).
 
 ```bash
 escape run build
