@@ -93,10 +93,16 @@ Release: Releasing quickstart/hello-world-v0.0.0
 Release: ✔️ Successfully released quickstart/hello-world-v0.0.0
 ```
 
+Each time we release a package, Escape will execute all the different steps,
+even if they have not yet been defined. After these steps have been executed,
+Escape will add all the files in `includes`to our package and upload it with our 
+compiled Escape plan to the Inventory. Even though we haven't told Escape how to 
+build or deploy anything we still get a valid package.
+
 We can keep running `escape run release` and see the version number increase
 for each successful push.
 
-We've built our package and made it available in the Inventory.  There
-is a lot going on here as Escape runs through all the different phases, but
-hopefully all becomes clear in the next section:
-
+We've finished packaging. Our file includes are now packaged up and are
+now available in the Inventory. We ain't done yet though, we haven't
+defined how we want to build and deploy our package. Keep on reading to find 
+out how we can do this:
