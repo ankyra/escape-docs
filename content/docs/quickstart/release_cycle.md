@@ -170,4 +170,4 @@ a package is in the inventory all its steps should have been tested. The main
 thing that a package will be used for after publishing is deployments so it's
 good to test this early.
 
-![Release Cycle](/docs/reference/release_cycle.png) 
+![Release Cycle](/docs/quickstart/release_cycle.png) 
