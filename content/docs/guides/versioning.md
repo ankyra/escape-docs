@@ -11,9 +11,9 @@ wip: false
 Escape supports semantic versioning, which are versions that look like this:
 `0.1`, `1.0`, `0.0.1`, `2.12.135`, etc.
 
-We can have arbitrarily many dots in our version, but usually we use three
-parts: the major version, the minor version and the patch version.  Each of
-these parts should tell us something about the software:
+We can have an arbitrary amount of dots in our version, but usually we use
+three parts: the major version, the minor version and the patch version.  Each
+of these parts should tell us something about the software:
 
 * A major version change suggests major breaking changes in the API. 
 * A minor version change suggests small changes or additions to the API.
