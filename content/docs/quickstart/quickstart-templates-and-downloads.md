@@ -145,8 +145,6 @@ downloads:
 - url: https://example.com/some-archive.tgz
   dest: some-archive.tgz
   unpack: true
-  if_not_exists:
-  - some-binary
 ```
 
 ### Skipping Downloads
@@ -170,7 +168,6 @@ downloads:
   unpack: true
   if_not_exists:
   - some-binary
-  - /usr/bin/already-installed-local-binary
 ```
 
 There are a few more options on Downloads, which you can find in the [reference

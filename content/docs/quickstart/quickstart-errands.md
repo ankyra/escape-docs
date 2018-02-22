@@ -86,15 +86,6 @@ the deployment name, and optionally the environment (default is "dev"):
 escape errands list --deployment my-deployment --environment ci
 ```
 
-When you're developing a new errand this behaviour is slightly limiting, because 
-for every change you would have to release and deploy the package before being 
-able to see the errand. To work around this we can also pass the `--local` flag, 
-which will instead read the errands from the Escape Plan:
-
-```bash
-escape errands list --local
-```
-
 ## Running Errands
 
 Running an errand can be done using the [errands
@@ -114,15 +105,31 @@ escape errands run --deployment my-deployment --environment ci backup \
   -v destination_bucket=s3://my-giant-backup-bucket
 ```
 
-When we're developing errands locally we don't want to release and deploy every
-change just to run it, so we can use the `--local` flag again, which takes the
-errands directly from the Escape Plan instead:
+## Developing Errands
+
+The previous commands are pretty simple, but when you're developing a new
+errand their behaviour is slightly limiting, because these commands only work
+on packages that have already been released and deployed.  This means that if
+we were to be developing a new errand and we'd want to list and run it to make
+sure it works we would have to release and deploy the package first.
+
+To avoid this we can also pass the `--local` flag. This will make Escape read
+the errands from the local Escape Plan, instead of trying to fetch them from the
+Inventory:
 
 ```bash
+escape errands list --local
+```
+
+To run an errand from the Escape Plan, we do still need a deployment, otherwise
+the errand has nothing to run against, but once deployed we can keep rerunning
+the `escape errands run --local` command:
+
+```bash
+escape run deploy --deployment my-deployment
 escape errands run --deployment my-deployment --environment ci --local backup
 ```
 
-However, this time we do actually need a deployment present as well! Otherwise
-the errand has nothing to run against. So we'll need to `escape run deploy`
-first, but on the plus side we only need to do that once. 
-
+Note: it's currently not possible to write tests for Errands that run as part
+of the release process, but you can trigger the errands from your "test" and
+"smoke" scripts.
