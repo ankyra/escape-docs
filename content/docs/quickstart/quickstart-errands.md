@@ -109,7 +109,7 @@ escape errands run --deployment my-deployment --environment ci backup \
 
 The previous commands are pretty simple, but when you're developing a new
 errand their behaviour is slightly limiting, because these commands only work
-on packages that have already been released and deployed.  This means that if
+on packages that have already been released.  This means that if
 we were to be developing a new errand and we'd want to list and run it to make
 sure it works we would have to release and deploy the package first.
 
@@ -121,13 +121,18 @@ Inventory:
 escape errands list --local
 ```
 
-To run an errand from the Escape Plan, we do still need a deployment, otherwise
-the errand has nothing to run against, but once deployed we can keep rerunning
-the `escape errands run --local` command:
+To run an errand from the Escape Plan we do still need a deployment, otherwise
+the errand has nothing to run against. We don't necessarily need to deploy an
+_already released_ package however; we can deploy from our Escape Plan as well,
+which fits the development process a bit better.  What's important is that the errand 
+gets access to the right state, otherwise the inputs and outputs won't match.
+
+Once the deployment is there we can keep rerunning the `escape errands run
+--local` command:
 
 ```bash
 escape run deploy --deployment my-deployment
-escape errands run --deployment my-deployment --environment ci --local backup
+escape errands run --deployment my-deployment --local backup
 ```
 
 Note: it's currently not possible to write tests for Errands that run as part
