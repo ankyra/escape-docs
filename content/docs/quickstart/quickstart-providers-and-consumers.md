@@ -44,8 +44,8 @@ inputs:
   default: $introduction.outputs.credentials
 ```
 
-When we try to `escape run build` or `escape run deploy` this package we'll get
-an error:
+When we try to `escape run build` or `escape run deploy` this package that
+requires a provider we get an error:
 
 ```bash
 $ escape run build --plan escape-consumer.yml
