@@ -12,8 +12,8 @@ contributeLink: https://example.com/
 ---
 
 There are a few ways to install the Escape command line tool onto your own
-machine. The preferred way for now is to download one of our pre-built binaries
-or use the official Docker image, but you can also build it from source. 
+machine. The preferred way is to download one of our pre-built binaries or use
+the official Docker image, but you can also build it from source. 
 
 # Pre-built binaries
 

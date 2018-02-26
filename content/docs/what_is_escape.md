@@ -17,6 +17,8 @@ that there will be at least one <i>environment</i> that is as close to the real
 thing as possible so that the business can develop and test new features, but
 on big projects there may be dozens; some only short-lived. 
 
+<img style='max-width: 760px' src='/img/multi_env.png'/>
+
 Managing, promoting and changing configuration between these different
 environments can often be quite difficult.  Escape's goal is to make
 managing multiple environments easier and automatable.
@@ -27,6 +29,8 @@ Different artefacts are often built and configured using different tools. For
 example: we may be building a Docker image using the `docker` command and
 deploy the image using the `kubectl` command on a Kubernetes cluster that was
 built on AWS using the `terraform` command.
+
+<img style='max-width: 760px' src='/img/docling_modern_stack.png'/>
 
 Having different tools targetting different layers makes it hard to orchestrate
 the deployment of a complete environment and to verify its consistency.
@@ -40,6 +44,8 @@ need to be versioned, configured, deployed and operated differently. The
 integration points between these layers are often bespoke, hard to change, and
 full of technical debt.
 
+<img style='max-width: 600px; padding: 20px; padding-left: 150px;' src='/img/docling_escape.png'/>
+
 Escape's goal is to bring and somewhat standardise the best practices in
 release engineering, but without being overly opinionated. 
 
@@ -48,9 +54,10 @@ release engineering, but without being overly opinionated.
 It can be hard to find out what version is live, what version has passed
 integration tests, what change was deployed, who authored it, etc. 
 
+<img src='/img/docling_intel_patch.png'/>
+
 Escape should enable you to make everything:
 
 * Identifiable
 * Reproducible
 * Consistent
-
