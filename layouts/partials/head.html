@@ -13,14 +13,27 @@
   <meta property="twitter:title" content="Escape - The Release Engineering and Continuous Delivery tool by Ankyra">
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ankyra is a London based company focused on products and services around Continuous Delivery on modern infrastructure.">
+  {{ if .Params.Description }}
+  <meta name="description" content="{{ .Params.Description }}">
+  <meta name="twitter:description" content="{{ .Params.Description}}">
+  <meta property="og:description" content="{{ .Params.Description}}">
+  {{ else }}
+  <meta name="description" content="Escape is an open source release engineering tool that can be used to test, build, deploy, version and operate software.">
+  <meta name="twitter:description" content="Escape is an open source release engineering tool that can be used to test, build, deploy, version and operate software.">
+  <meta property="og:description" content="Escape is an open source release engineering tool that can be used to test, build, deploy, version and operate software.">
+  {{ end }}
+  {{ if .Params.Image }}
+  <meta property="og:image" content="{{ .Site.BaseURL}}/{{ .Params.Image }}">
+  <meta name="twitter:image" content="{{ .Site.BaseURL}}/{{ .Params.Image }}">
+  {{ else }}
+  <meta property="og:image" content="{{ .Site.BaseURL }}/img/docling_modern_stack.png">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}/img/docling_modern_stack.png">
+  {{ end }}
   <meta name="robots" content="all">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Experts in Continuous Delivery on Modern Infrastructure">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="Ankyra">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="Experts in Continuous Delivery on Modern Infrastructure">
   <meta name="twitter:domain" content="Ankyra">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
