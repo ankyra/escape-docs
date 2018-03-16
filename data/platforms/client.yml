@@ -10,3 +10,9 @@ darwin-amd64:
 darwin-386: 
   icon: "fa-apple"
   name: "MacOS (32 bit)"
+windows-386:
+  icon: "fa-windows"
+  name: "Windows (32 bit)"
+windows-amd64:
+  icon: "fa-windows"
+  name: "Windows (64 bit)"
