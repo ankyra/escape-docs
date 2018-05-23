@@ -7,8 +7,8 @@ pygmentsOptions = ""
 
 [params]
     gaTrackingId = ""
-    escapeClientVersion = "0.23.8"
-    escapeInventoryVersion = "0.14.5"
+    escapeClientVersion = "0.25.6"
+    escapeInventoryVersion = "0.16.0"
 
 
 [menu]
@@ -19,69 +19,19 @@ pygmentsOptions = ""
     weight     = 1
 
     [[menu.ankyra]]
-    identifier = "products"
-    name       = "Products"
-    url        = "https://www.ankyra.io/products/"
-    weight     = 2
-
-    [[menu.ankyra]]
     identifier = "docs"
     name       = "Docs"
     url        = "/docs/"
     weight     = 3
 
     [[menu.ankyra]]
-    identifier = "team"
-    name       = "Team"
-    url        = "https://www.ankyra.io/team/"
-    weight     = 4
-
-    #[[menu.ankyra]]
-    #identifier = "services"
-    #name       = "Services"
-    #url        = "#"
-    #weight     = 3
-
-    [[menu.ankyra]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "https://www.ankyra.io/blog/"
-    weight     = 5
-
-    [[menu.ankyra]]
     name       = "Contact"
-    url        = "https://www.ankyra.io/contact/"
+    url        = "https://www.ankyra.io/#contact"
     weight     = 6
 
     [[menu.ankyra]]
-    name       = "Twitter"
+    name       = "Follow us on Twitter"
     pre        = "<i class='fa fa-twitter' aria-hidden='true'></i>&nbsp;"  
     url        = "https://twitter.com/AnkyraLtd"
     weight     = 7
 
-    [[menu.ankyra]]
-    name       = "Github"
-    pre        = "<i class='fa fa-github' aria-hidden='true'></i>&nbsp;"  
-    url        = "https://github.com/Ankyra"
-    weight     = 8
-
-    [[menu.main]]
-    identifier = "escape"
-    name       = "Escape"
-    pre        = ""  
-    url        = "https://www.ankyra.io/products/"
-    weight     = 1
-
-    [[menu.main]]
-    identifier = "docs"
-    name       = "Documentation"
-    pre        = ""  
-    url        = "/docs/"
-    weight     = 2
-
-    [[menu.main]]
-    identifier = "downloads"
-    name       = "Downloads"
-    pre        = ""  
-    url        = "/downloads/"
-    weight     = 3
