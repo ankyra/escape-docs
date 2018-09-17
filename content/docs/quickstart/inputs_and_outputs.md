@@ -106,7 +106,7 @@ cat > hello_world.sh <<EOF
 
 set -euf
 
-echo "Hello \${INPUT_who}!"
+echo "Hello ${INPUT_who}!"
 EOF
 ```
 
