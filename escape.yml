@@ -15,7 +15,7 @@ depends:
 - heist/escape-integration-tests-latest as escape
 
 extends:
-- extension-docker-kubespec-latest
+- docker-kubespec-builder-latest
 
 
 inputs:
@@ -55,8 +55,8 @@ build_templates:
 deploy_templates:
 - file: deployment.yml.tpl
   mapping:
-    docker_image: $this.inputs.docker_repository.concat($this.inputs.docker_image,
+    docker_image: $this.inputs.docker_repository.concat("/", $this.inputs.docker_image,
       ":", $this.inputs.docker_image_version)
 
 
-build: build.sh
+pre_build: build.sh
